@@ -10,7 +10,7 @@
     /* 
         ==================
 
-        Maor Task Week One
+        Major Task Week One
        
 
         ==================
