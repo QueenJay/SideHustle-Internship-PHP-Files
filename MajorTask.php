@@ -10,16 +10,8 @@
     /* 
         ==================
 
-        ++++++++++++ Major Task For this Week Friday, 16th - Oct - 2020 +++++++++++++
-
-        Perform arithemetic operation on each operators in the below code.
-
-        Make sure to upload this file to your github repository.
-
-        Deadline line for submission is 9pm on the same day.
-
-        **********************************************
-        !!!!!!!!!! Have a lovely Weekend !!!!!!!!!!!!!
+        Maor Task Week One
+       
 
         ==================
     */
