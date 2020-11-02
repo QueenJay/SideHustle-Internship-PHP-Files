@@ -1,6 +1,5 @@
 <?php 
 
-	// 
 include('server.php');
 	if (isset($_GET['edit'])) {
 		$id = $_GET['edit'];
@@ -11,6 +10,7 @@ include('server.php');
 			$age = $n['age'];
 			$username = $n['username'];
 			$address = $n['address'];
+			$image = $n['image'];
 			
 
 	}
@@ -43,6 +43,7 @@ include('server.php');
 			<th>Age</th>
 			<th>Username</th>
 			<th>Address</th>
+			<th>Picture</th>
 			<th colspan="2">Action</th>
 		</tr>
 	</thead>
@@ -53,6 +54,7 @@ include('server.php');
 			<td><?php echo $row['age']; ?></td>
 			<td><?php echo $row['username']; ?></td>
 			<td><?php echo $row['address']; ?></td>
+			<td><img src= '<?php echo 'images/'.$row['image']; ?>' height='40px' width='40px' alt ="Picture"> </td>
 			<td>
 				<a href="index.php?edit=<?php echo $row['id']; ?>" class="edit_btn" >Edit</a>
 			</td>
@@ -65,7 +67,7 @@ include('server.php');
 	
 
 
-<form method="post" action="server.php" >
+<form method="post" action="server.php" enctype="multipart/form-data">
 
 	<input type="hidden" name="id" value="<?php echo $id; ?>">
 
@@ -85,6 +87,10 @@ include('server.php');
 		<label>Address</label>
 		<input type="text" name="address" value="<?php echo $address; ?>">
 	</div>
+	<div class='input-group'>
+        <label>Picture</label>
+        <input type='file' name='image'  src='<?php echo 'images/'.$image; ?>' >
+    </div>
 	<div class="input-group">
 
 		<?php if ($update == true): ?>
